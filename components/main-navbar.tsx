@@ -38,7 +38,7 @@ export default function MainNavbar() {
         <NavbarLogo />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
-          <NavbarButton variant="primary">Contact Us</NavbarButton>
+          <NavbarButton variant="primary" style={{ borderRadius: '12px' }}>Contact Us</NavbarButton>
         </div>
       </NavBody>
 
