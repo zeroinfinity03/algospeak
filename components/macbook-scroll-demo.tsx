@@ -6,7 +6,7 @@ export default function MacbookScrollDemo() {
         <div className="w-full overflow-hidden bg-white dark:bg-[#0B0B0F]">
             <MacbookScroll
                 title={
-                    <span>
+                    <span className="block pt-12">
                         Experience our AI Content Moderation <br /> in action.
                     </span>
                 }
