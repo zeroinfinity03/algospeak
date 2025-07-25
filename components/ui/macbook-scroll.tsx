@@ -2,27 +2,30 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { MotionValue, motion, useScroll, useTransform } from "motion/react";
 import { cn } from "@/lib/utils";
+import { ModerationDemo } from "./moderation-demo";
 import {
     IconBrightnessDown,
     IconBrightnessUp,
+    IconCaretDownFilled,
+    IconCaretLeftFilled,
     IconCaretRightFilled,
     IconCaretUpFilled,
+    IconCheck,
     IconChevronUp,
+    IconCommand,
     IconMicrophone,
     IconMoon,
     IconPlayerSkipForward,
     IconPlayerTrackNext,
     IconPlayerTrackPrev,
+    IconSearch,
+    IconSettings,
     IconTable,
     IconVolume,
     IconVolume2,
     IconVolume3,
+    IconWorld,
 } from "@tabler/icons-react";
-import { IconSearch } from "@tabler/icons-react";
-import { IconWorld } from "@tabler/icons-react";
-import { IconCommand } from "@tabler/icons-react";
-import { IconCaretLeftFilled } from "@tabler/icons-react";
-import { IconCaretDownFilled } from "@tabler/icons-react";
 
 export const MacbookScroll = ({
     src,
@@ -171,35 +174,8 @@ export const Lid = ({
                         className="absolute inset-0 h-full w-full rounded-lg object-cover object-left-top"
                     />
                 ) : (
-                    <div className="absolute inset-0 h-full w-full rounded-lg bg-gray-50 dark:bg-neutral-900 p-3 overflow-hidden">
-                        {/* Demo UI Content - Compact Version */}
-                        <div className="h-full w-full flex flex-col">
-                            <h3 className="text-lg font-bold mb-3 text-black dark:text-white">
-                                AI Content Moderation
-                            </h3>
-                            <div className="mb-3">
-                                <label className="block text-left text-xs font-medium mb-1 text-black dark:text-white">
-                                    Test Content:
-                                </label>
-                                <textarea
-                                    className="w-full p-2 border border-gray-300 dark:border-neutral-700 rounded bg-white dark:bg-neutral-800 text-black dark:text-white text-xs"
-                                    rows={2}
-                                    placeholder="Enter content to analyze..."
-                                    defaultValue="Sample text for moderation testing."
-                                />
-                            </div>
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium transition-colors text-xs mb-3">
-                                Analyze Content
-                            </button>
-                            <div className="p-2 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded">
-                                <p className="text-green-800 dark:text-green-200 font-medium text-xs">
-                                    ✓ Content approved - No harmful patterns
-                                </p>
-                                <p className="text-green-600 dark:text-green-300 text-xs mt-1">
-                                    Analysis: 0.23s
-                                </p>
-                            </div>
-                        </div>
+                    <div className="absolute inset-0 h-full w-full rounded-lg bg-gray-50 dark:bg-neutral-900 p-6 overflow-hidden">
+                        <ModerationDemo />
                     </div>
                 )}
             </motion.div>
